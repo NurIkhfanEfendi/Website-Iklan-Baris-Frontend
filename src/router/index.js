@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
+import Iklan from '../views/Iklan.vue'
+import Navbar from '../views/layouts/Navbar.vue'
 
 Vue.use(VueRouter)
 
@@ -19,6 +21,15 @@ const routes = [
       requiresAuth: true
     }
   },
+  {
+    path: '/',
+    name: 'iklan',
+    component: Iklan,
+    meta:{
+      requiresAuth: true
+    }
+  },
+
 ]
 
 const router = new VueRouter({
